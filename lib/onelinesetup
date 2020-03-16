@@ -1,5 +1,5 @@
 #!/bin/bash
-DOMAIN=${1:-magento2.test}
+DOMAIN=${1:-magento2.dev}
 VERSION=${2:-2.3.3}
 
 curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/template | bash

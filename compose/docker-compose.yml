@@ -17,12 +17,16 @@ services:
       - appdata:/var/www/html
       - sockdata:/sock
       - ssldata:/etc/nginx/certs
+    environment:
+      - TZ=Asia/Bangkok
 
   phpfpm:
     image: markoshust/magento-php:7.3-fpm-5
     links:
       - db
     volumes: *appvolumes
+    environment:
+      - TZ=Asia/Bangkok
 
   db:
     image: percona:5.7
@@ -31,15 +35,28 @@ services:
     env_file: env/db.env
     volumes:
       - dbdata:/var/lib/mysql
+    environment:
+      - TZ=Asia/Bangkok
 
   redis:
     image: redis:5.0
+    environment:
+      - TZ=Asia/Bangkok
 
   elasticsearch:
     image: markoshust/magento-elasticsearch:6.5.4-0
     ports:
       - "9200:9200"
       - "9300:9300"
+    environment:
+      - TZ=Asia/Bangkok
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.5.4
+    ports:
+      - "5601:5601"
+    environment:
+      - TZ=Asia/Bangkok
 
   rabbitmq:
     image: rabbitmq:3.7-management

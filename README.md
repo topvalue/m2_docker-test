@@ -11,62 +11,12 @@
 
 ## Table of contents
 
-- [Free Course](#free-course)
-- [Docker Hub](#docker-hub)
 - [Usage](#usage)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Updates](#updates)
 - [Custom CLI Commands](#custom-cli-commands)
 - [Misc Info](#misc-info)
-- [Credits](#credits)
-- [License](#license)
-
-## Free Course
-
-I created a free screencast course which details the basic usage of this project:
-
-<a href="https://m.academy/courses/setup-magento-2-development-environment-docker" target="_blank">
-<img src="https://raw.githubusercontent.com/markshust/docker-magento/master/docs/course.png" alt="Setup a Magento 2 Development Environment with Docker"><br />
-Setup a Magento 2 Development Environment with Docker
-</a>
-
-## Docker Hub
-
-View Dockerfiles:
-
-- [markoshust/magento-nginx (Docker Hub)](https://hub.docker.com/r/markoshust/magento-nginx/)
-  - 1.13
-      - [`latest`, `1.13`, `1.13-8`](https://github.com/markshust/docker-magento/tree/master/images/nginx/1.13)
-      - [`1.13-7`](https://github.com/markshust/docker-magento/tree/27.0.0/images/nginx/1.13)
-      - [`1.13-6`](https://github.com/markshust/docker-magento/tree/20.1.1/images/nginx/1.13)
-      - [`1.13-5`](https://github.com/markshust/docker-magento/tree/18.1.1/images/nginx/1.13)
-      - [`1.13-4`](https://github.com/markshust/docker-magento/tree/18.0.1/images/nginx/1.13)
-      - [`1.13-3`](https://github.com/markshust/docker-magento/tree/15.0.1/images/nginx/1.13)
-      - [`1.13-2`](https://github.com/markshust/docker-magento/tree/12.0.0/images/nginx/1.13)
-      - [`1.13-1`](https://github.com/markshust/docker-magento/tree/11.1.5/images/nginx/1.13)
-      - [`1.13-0`](https://github.com/markshust/docker-magento/tree/11.0.0/images/nginx/1.13)
-- [markoshust/magento-php (Docker Hub)](https://hub.docker.com/r/markoshust/magento-php/)
-  - 7.3
-      - [`latest`, `7.3-fpm`, `7.3-fpm-5`](https://github.com/markshust/docker-magento/tree/master/images/php/7.3)
-      - [`7.3-fpm-4`](https://github.com/markshust/docker-magento/tree/29.0.0/images/php/7.3)
-      - [`7.3-fpm-3`](https://github.com/markshust/docker-magento/tree/28.0.0/images/php/7.3)
-      - [`7.3-fpm-2`](https://github.com/markshust/docker-magento/tree/27.2.0/images/php/7.3)
-      - [`7.3-fpm-1`](https://github.com/markshust/docker-magento/tree/26.0.0/images/php/7.3)
-      - [`7.3-fpm-0`](https://github.com/markshust/docker-magento/tree/24.2.0/images/php/7.3)
-  - 7.2
-      - [`7.2-fpm`, `7.2-fpm-8`](https://github.com/markshust/docker-magento/tree/master/images/php/7.2)
-      - [`7.2-fpm-7`](https://github.com/markshust/docker-magento/tree/29.0.0/images/php/7.2)
-      - [`7.2-fpm-6`](https://github.com/markshust/docker-magento/tree/28.0.0/images/php/7.2)
-      - [`7.2-fpm-5`](https://github.com/markshust/docker-magento/tree/27.2.0/images/php/7.2)
-      - [`7.2-fpm-4`](https://github.com/markshust/docker-magento/tree/26.0.0/images/php/7.2)
-      - [`7.2-fpm-3`](https://github.com/markshust/docker-magento/tree/24.2.0/images/php/7.2)
-      - [`7.2-fpm-2`](https://github.com/markshust/docker-magento/tree/23.2.1/images/php/7.2)
-      - [`7.2-fpm-1`](https://github.com/markshust/docker-magento/tree/23.1.1/images/php/7.2)
-      - [`7.2-fpm-0`](https://github.com/markshust/docker-magento/tree/23.0.0/images/php/7.2)
-- [markoshust/magento-elasticsearch (Docker Hub)](https://hub.docker.com/r/markoshust/magento-elasticsearch/)
-  - 6.5
-      - [`latest`, `6.5`, `6.5.4-0`](https://github.com/markshust/docker-magento/tree/master/images/elasticsearch/6.5)
 
 ## Usage
 
@@ -92,22 +42,22 @@ This configuration has been tested on Mac & Linux. Windows is supported through 
 Run this automated one-liner from the directory you want to install your project to:
 
 ```bash
-curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/onelinesetup | bash -s -- magento2.test 2.3.4
+curl -s https://raw.githubusercontent.com/topvalue/m2_docker-test/master/lib/onelinesetup | bash -s -- magento2.dev 2.3.4
 ```
 
-The `magento2.test` above defines the hostname to use, and the `2.3.4` defines the Magento version to install. Note that since we need a write to `/etc/hosts` for DNS resolution, you will be prompted for your system password during setup.
+The `magento2.dev` above defines the hostname to use, and the `2.3.4` defines the Magento version to install. Note that since we need a write to `/etc/hosts` for DNS resolution, you will be prompted for your system password during setup.
 
-After the one-liner above completes running, you should be able to access your site at `https://magento2.test`.
+After the one-liner above completes running, you should be able to access your site at `https://magento2.dev`.
 
 ### Manual Setup
 
-Same result as the one-liner above. Just replace `magento2.test` references with the hostname that you wish to use.
+Same result as the one-liner above. Just replace `magento2.dev` references with the hostname that you wish to use.
 
 #### New Projects
 
 ```bash
 # Download the Docker Compose template:
-curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/template | bash
+curl -s https://raw.githubusercontent.com/topvalue/m2_docker-test/master/lib/template | bash
 
 # Download the version of Magento you want to use with:
 bin/download 2.3.4
@@ -125,19 +75,19 @@ bin/download 2.3.4
 # composer create-project --repository=https://repo.magento.com/ --ignore-platform-reqs magento/project-enterprise-edition=2.3.4 src
 
 # Create a DNS host entry for the site:
-echo "127.0.0.1 ::1 magento2.test" | sudo tee -a /etc/hosts
+echo "127.0.0.1 ::1 magento2.dev" | sudo tee -a /etc/hosts
 
 # Run the setup installer for Magento:
-bin/setup magento2.test
+bin/setup magento2.dev
 
-open https://magento2.test
+open https://magento2.dev
 ```
 
 #### Existing Projects
 
 ```bash
 # Download the Docker Compose template:
-curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/template | bash
+curl -s https://raw.githubusercontent.com/topvalue/m2_docker-test/master/lib/template | bash
 
 # Remove existing src directory:
 rm -rf src
@@ -174,7 +124,7 @@ bin/magento config:set web/unsecure/base_url https://yoursite.test/
 
 bin/restart
 
-open https://magento2.test
+open https://magento2.dev
 ```
 
 > For more details on how everything works, see the extended [setup readme](https://github.com/markshust/docker-magento/blob/master/SETUP.md).
@@ -227,9 +177,9 @@ You'll now have an updated `bin/update` helper script, and can run it to update 
 - `bin/restart`: Stop and then start all containers.
 - `bin/root`: Run any CLI command as root without going into the bash prompt. Ex `bin/root apt-get install nano`
 - `bin/rootnotty`: Run any CLI command as root with no TTY. Ex `bin/rootnotty chown -R app:app /var/www/html`
-- `bin/setup`: Run the Magento setup process to install Magento from the source code, with optional domain name. Defaults to `magento2.test`. Ex. `bin/setup magento2.test`
-- `bin/setup-pwa-studio`: (BETA) Install PWA Studio (requires NodeJS and Yarn to be installed on the host machine). Pass in your base site domain, otherwise the default `master-7rqtwti-mfwmkrjfqvbjk.us-4.magentosite.cloud` will be used. Ex: `bin/setup-pwa-studio magento2.test`
-- `bin/setup-ssl`: Generate an SSL certificate for one or more domains. Ex. `bin/setup-ssl magento2.test magento3.test`
+- `bin/setup`: Run the Magento setup process to install Magento from the source code, with optional domain name. Defaults to `magento2.dev`. Ex. `bin/setup magento2.dev`
+- `bin/setup-pwa-studio`: (BETA) Install PWA Studio (requires NodeJS and Yarn to be installed on the host machine). Pass in your base site domain, otherwise the default `master-7rqtwti-mfwmkrjfqvbjk.us-4.magentosite.cloud` will be used. Ex: `bin/setup-pwa-studio magento2.dev`
+- `bin/setup-ssl`: Generate an SSL certificate for one or more domains. Ex. `bin/setup-ssl magento2.dev magento3.test`
 - `bin/setup-ssl-ca`: Generate a certificate authority and copy it to the host.
 - `bin/start`: Start all containers, good practice to use this instead of `docker-compose up -d`, as it may contain additional helpers.
 - `bin/status`: Check the container status.
@@ -317,13 +267,13 @@ Otherwise, this project now automatically sets up Xdebug support with VS Code. I
 
 6. Open `PHPStorm > Preferences > Languages & Frameworks > PHP > Servers` and create a new server:
 
-    * Set Name and Host to your domain name (ex. `magento2.test`)
+    * Set Name and Host to your domain name (ex. `magento2.dev`)
     * Keep port set to `80`
     * Check the Path Mappings box and map `src` to the absolute path of `/var/www/html`
 
-7. Go to `Run > Edit Configurations` and create a new `PHP Remote Debug` configuration by clicking the plus sign and selecting it. Set the Name to your domain (ex. `magento2.test`). Check the `Filter debug connection by IDE key` checkbox, select the server you just setup, and under IDE Key enter `PHPSTORM`. This IDE Key should match the IDE Key set by the Chrome Xdebug Helper. Then click OK to finish setting up the remote debugger in PHPStorm.
+7. Go to `Run > Edit Configurations` and create a new `PHP Remote Debug` configuration by clicking the plus sign and selecting it. Set the Name to your domain (ex. `magento2.dev`). Check the `Filter debug connection by IDE key` checkbox, select the server you just setup, and under IDE Key enter `PHPSTORM`. This IDE Key should match the IDE Key set by the Chrome Xdebug Helper. Then click OK to finish setting up the remote debugger in PHPStorm.
 
-8. Open up `src/pub/index.php`, and set a breakpoint near the end of the file. Go to `Run > Debug 'magento2.test'`, and open up a web browser. Ensure the Chrome Xdebug helper is enabled by clicking on it > Debug. Navigate to your Magento store URL, and Xdebug within PHPStorm should now trigger the debugger and pause at the toggled breakpoint.
+8. Open up `src/pub/index.php`, and set a breakpoint near the end of the file. Go to `Run > Debug 'magento2.dev'`, and open up a web browser. Ensure the Chrome Xdebug helper is enabled by clicking on it > Debug. Navigate to your Magento store URL, and Xdebug within PHPStorm should now trigger the debugger and pause at the toggled breakpoint.
 
 ### Linux
 
@@ -352,26 +302,3 @@ Next, open up the `bin/start` helper script and uncomment the line:
 ```
 
 Finally, restart the containers with `bin/restart`. After doing so, everything is now configured and you can use a browser extension to profile your Magento store with Blackfire.
-
-## Credits
-
-### Mark Shust
-
-I'm a <a href="https://u.magento.com/certification/directory/dev/883/" target="_blank">Certified Magento Developer & Architect</a> & <a href="http://www.zend.com/en/yellow-pages/ZEND014633" target="_blank">Zend Certified Engineer</a>, and available for consulting & development of your next project 🤓. You can read my blog at <a href="https://markshust.com" target="_blank">markshust.com</a> or contact me directly at <a href="mailto:mark@shust.com">mark@shust.com</a>.
-
-### M.academy
-
-At <a href="https://m.academy" target="_blank">M.academy</a> you can learn the basics of Magento 2 programming & architecture, explained simply by a Certified Magento Developer.
-
-#### Available Courses:
-
-- <a href="https://m.academy/courses/setup-magento-2-development-environment-docker" target="_blank">Setup a Magento 2 Development Environment with Docker</a> (FREE!) - The easiest way to install, manage, configure & standardize Magento development environments across your team.
-- <a href="https://m.academy/courses/magento-2-coding-kickstart" target="_blank">Magento 2 Coding Kickstart</a> - Start to become productive in Magento 2 programming within one week with no prior experience.
-
-### Nexcess
-
-A special thanks goes out to <a href="https://www.nexcess.net/" target="_blank">Nexcess</a> for hosting <a href="http://pubfiles.nexcess.net/magento/ce-packages/" target="_blank">public archives of every version of Magento</a> 💙. I've used their Magento hosting services in the past also (both <a href="https://www.nexcess.net/magento/hosting/" target="_blank">shared</a> and <a href="https://www.nexcess.net/magento/enterprise-hosting/" target="_blank">enteprise</a> offerings) and they're great, ...highly recommended!
-
-## License
-
-[MIT](https://opensource.org/licenses/MIT)

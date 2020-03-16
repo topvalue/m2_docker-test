@@ -1,5 +1,5 @@
 #!/bin/bash
-BASE_URL=${1:-magento2.test}
+BASE_URL=${1:-magento2.dev}
 
 bin/stop
 
