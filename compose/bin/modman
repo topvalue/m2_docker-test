@@ -102,6 +102,8 @@ modman clone git@github.com:topvalue/m2_import-export.git
 
 modman clone git@github.com:topvalue/m2_meetanshi-sms.git
 modman clone git@github.com:topvalue/m2_digital-data-layer.git
+modman clone git@github.com:topvalue/m2_cron-scheduler.git
+modman clone git@github.com:topvalue/m2_push-notification.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
