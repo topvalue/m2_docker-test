@@ -41,6 +41,7 @@ cd src
 echo $(pwd)
 modman init
 echo "Install magento extensions.."
+modman clone git@github.com:topvalue/m2_topvalue-script.git
 modman clone git@github.com:topvalue/m2_onestep-checkout.git
 modman clone git@github.com:topvalue/m2_sm-market-theme.git
 modman clone git@github.com:topvalue/m2_elastic-search.git
