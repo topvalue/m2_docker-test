@@ -107,6 +107,7 @@ modman clone git@github.com:topvalue/m2_cron-scheduler.git
 modman clone git@github.com:topvalue/m2_push-notification.git
 modman clone git@github.com:topvalue/m2_order-tracking.git
 modman clone git@github.com:topvalue/m2_full-page-cache.git
+modman clone git@github.com:topvalue/m2_out-of-stock-notification.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
