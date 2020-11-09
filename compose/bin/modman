@@ -114,6 +114,11 @@ modman clone git@github.com:topvalue/m2_custom-form.git
 modman clone git@github.com:topvalue/m2_cj-theme.git
 modman clone git@github.com:topvalue/m2_product-slider.git
 modman clone git@github.com:topvalue/m2_banner-slider.git
+modman clone git@github.com:topvalue/m2_lazy-load.git
+modman clone git@github.com:topvalue/m2_zendesk.git
+modman clone git@github.com:topvalue/m2_topvalue-tvapi.git
+modman clone git@github.com:topvalue/m2_redis-manager.git
+modman clone git@github.com:topvalue/m2_pre-order.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
