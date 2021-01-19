@@ -119,6 +119,8 @@ modman clone git@github.com:topvalue/m2_zendesk.git
 modman clone git@github.com:topvalue/m2_topvalue-tvapi.git
 modman clone git@github.com:topvalue/m2_redis-manager.git
 modman clone git@github.com:topvalue/m2_pre-order.git
+modman clone git@github.com:topvalue/m2_rabbit-linepay.git
+modman clone git@github.com:topvalue/m2_social-login-add-on.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
