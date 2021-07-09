@@ -84,7 +84,11 @@ modman clone git@github.com:topvalue/m2_omise.git
 ### Note ### m2_omise require manual install some library
 #--------------------------------------------------
 
+#--------------------------------------------------
 modman clone git@github.com:topvalue/m2_visual-merchandiser.git
+### Deactivate. no longer used
+#--------------------------------------------------
+
 modman clone git@github.com:topvalue/m2_smtp.git
 modman clone git@github.com:topvalue/m2_infinite-scroll.git
 #modman clone git@github.com:topvalue/m2_netsuite.git
@@ -111,7 +115,12 @@ modman clone git@github.com:topvalue/m2_out-of-stock-notification.git
 modman clone git@github.com:topvalue/m2_criteo-onetag.git
 modman clone git@github.com:topvalue/m2_advanced-report.git
 modman clone git@github.com:topvalue/m2_custom-form.git
-modman clone git@github.com:topvalue/m2_cj-theme.git
+
+#--------------------------------------------------
+#modman clone git@github.com:topvalue/m2_cj-theme.git
+### Deactivate. no longer used
+#--------------------------------------------------
+
 modman clone git@github.com:topvalue/m2_product-slider.git
 modman clone git@github.com:topvalue/m2_banner-slider.git
 modman clone git@github.com:topvalue/m2_lazy-load.git
@@ -121,6 +130,7 @@ modman clone git@github.com:topvalue/m2_redis-manager.git
 modman clone git@github.com:topvalue/m2_pre-order.git
 modman clone git@github.com:topvalue/m2_rabbit-linepay.git
 modman clone git@github.com:topvalue/m2_social-login-add-on.git
+modman clone git@github.com:topvalue/m2_admin-ui-select-attribute.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
