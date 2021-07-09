@@ -85,7 +85,7 @@ modman clone git@github.com:topvalue/m2_omise.git
 #--------------------------------------------------
 
 #--------------------------------------------------
-modman clone git@github.com:topvalue/m2_visual-merchandiser.git
+#modman clone git@github.com:topvalue/m2_visual-merchandiser.git
 ### Deactivate. no longer used
 #--------------------------------------------------
 
