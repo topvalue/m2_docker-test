@@ -46,8 +46,8 @@ bin/clinotty chmod u+x bin/magento
 # fi
 
 # echo "Forcing reinstall of composer deps to ensure perms & reqs..."
-# bin/clinotty composer global require hirak/prestissimo
-# bin/clinotty composer install
+bin/clinotty composer global require hirak/prestissimo
+bin/clinotty composer install
 
 bin/clinotty bin/magento setup:install \
   --db-host=db \
