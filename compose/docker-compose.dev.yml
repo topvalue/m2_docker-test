@@ -15,12 +15,14 @@ services:
       - ./src/nginx.conf.sample:/var/www/html/nginx.conf:delegated
       #- ./src/var/log:/var/www/html/var/log:delegated
       #- ./src/var/report:/var/www/html/var/report:delegated
+      #- ./src/var/import/images:/var/www/html/var/import/images:delegated
       - ./src/.modman:/var/www/html/.modman:delegated
-      - ./src/pub/media:/var/www/html/pub/media:delegated
-      - ./src/webhook:/var/www/html/webhook:delegated
       # SSH-KEY for GitHub (used for webhook)
       - ~/.ssh:/var/www/.ssh:delegated
-      #- ./src/var/import/images:/var/www/html/var/import/images:delegated
+      # Enable for Staging
+      #- ./src/webhook:/var/www/html/webhook:delegated
+      # Enable for Production and Staging
+      #- ./src/pub/media:/var/www/html/pub/media:delegated
 
   phpfpm:
     volumes: *appvolumes
