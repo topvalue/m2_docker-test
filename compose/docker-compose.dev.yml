@@ -20,7 +20,7 @@ services:
       - ./src/webhook:/var/www/html/webhook:delegated
       # SSH-KEY for GitHub (used for webhook)
       - ~/.ssh:/var/www/.ssh:delegated
-      - ./src/var/import/images:/var/www/html/var/import/images:delegated
+      #- ./src/var/import/images:/var/www/html/var/import/images:delegated
 
   phpfpm:
     volumes: *appvolumes
