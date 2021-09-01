@@ -91,7 +91,7 @@ modman clone git@github.com:topvalue/m2_omise.git
 
 modman clone git@github.com:topvalue/m2_smtp.git
 modman clone git@github.com:topvalue/m2_infinite-scroll.git
-#modman clone git@github.com:topvalue/m2_netsuite.git
+modman clone git@github.com:topvalue/m2_netsuite.git
 modman clone git@github.com:topvalue/m2_asynchronous-reindexing.git
 modman clone git@github.com:topvalue/m2_payment-restrictions.git
 
